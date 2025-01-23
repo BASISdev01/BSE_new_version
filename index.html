@@ -1,0 +1,334 @@
+<!doctype html>
+<html data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar shadow">
+        <div class="container flex items-center justify-between">
+            <div class="navbar-start max-md:w-1/4">
+              <a class="link text-base-content link-neutral text-xl font-semibold no-underline" href="#">
+                <img src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="navbar-center max-md:hidden">
+                <ul class="menu menu-horizontal p-0 font-medium">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end items-center gap-4">
+              <div class="dropdown relative inline-flex md:hidden rtl:[--placement:bottom-end]">
+                <button id="dropdown-default" type="button" class="dropdown-toggle btn btn-text btn-secondary btn-square" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                  <span class="icon-[tabler--menu-2] dropdown-open:hidden size-5"></span>
+                  <span class="icon-[tabler--x] dropdown-open:block hidden size-5"></span>
+                </button>
+                <ul class="dropdown-menu dropdown-open:opacity-100 hidden min-w-60" role="menu" aria-orientation="vertical" aria-labelledby="dropdown-default">
+                  <li><a class="dropdown-item" href="#">Home</a></li>
+                  <li><a class="dropdown-item" href="#">Products</a></li>
+                  <li><a class="dropdown-item" href="#">About</a></li>
+                  <li><a class="dropdown-item" href="#">Services</a></li>
+                  <li><a class="dropdown-item" href="#">Contact</a></li>
+                </ul>
+              </div>
+              <button
+                id="themeSwitcher"
+                class="p-2 bg-gray-300 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full flex items-center justify-center transition duration-300"
+                aria-label="Toggle Theme"
+              >
+                <!-- Sun Icon (for Light Mode) -->
+                <svg
+                  id="sun-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 hidden"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364 6.364l-1.414-1.414M6.364 6.364L4.95 4.95m12.02 0l-1.415 1.414M6.364 17.636l-1.414 1.414M12 8a4 4 0 110 8 4 4 0 010-8z"
+                  />
+                </svg>
+                <!-- Moon Icon (for Dark Mode) -->
+                <svg
+                  id="moon-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 hidden"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"
+                  />
+                </svg>
+              </button>
+              <a class="btn rounded-full" href="#">
+                <span class="max-md:hidden">Get started</span>
+                <span class="icon-[tabler--arrow-right]"></span>
+              </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero  -->
+    <section class="h-[75vh] flex items-center">
+        <div class="container">
+            <div class="grid grid-cols-12 gap-4">
+                <div class="col-span-6">
+                    <div class="flex flex-col space-y-8">
+                        <h1 class="text-4xl font-bold">
+                            The Simplest Could that Scales <span class="text-teal-500">With You</span>
+                        </h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                        </p>
+                        <div class="flex space-x-8">
+                            <button class="bg-teal-500 px-8 text-slate-950 font-semibold py-2 rounded-full">Explore</button>
+                            <a href="#" class="inline-flex items-center gap-2">
+                                <span>
+                                    <div class="bg-teal-500 h-10 w-10 rounded-full items-center justify-center bg-opacity-50 flex gap-4">
+                                        <span href="#" class="bg-teal-500 h-7 w-7 rounded-full flex items-center justify-center">
+                                            <i class="fa-solid fa-play"></i>
+                                        </span>
+                                    </div>
+                                </span>
+                                <span>Eatch Demo Video</span>
+                            </a>
+                        </div>
+                        <div class="flex space-x-4">
+                            <div class="border h-16 w-16 rounded-full flex items-center justify-center p-1">
+                                <img src="../images/goLogo.png" alt="">
+                            </div>
+                            <div class="border h-16 w-16 rounded-full flex items-center justify-center p-1">
+                                <img src="../images/goLogo.png" alt="">
+                            </div>
+                            <div class="border h-16 w-16 rounded-full flex items-center justify-center p-1">
+                                <img src="../images/goLogo.png" alt="">
+                            </div>
+                            <div class="border h-16 w-16 rounded-full flex items-center justify-center p-1">
+                                <img src="../images/goLogo.png" alt="">
+                            </div>
+                            <div class="border h-16 w-16 rounded-full flex items-center justify-center p-1">
+                                <img src="../images/goLogo.png" alt="">
+                            </div>
+                            <div class="border h-16 w-16 rounded-full flex items-center justify-center p-1">
+                                <img src="../images/goLogo.png" alt="">
+                            </div>
+                            <div class="border h-16 w-16 rounded-full flex items-center justify-center p-1">
+                                <img src="../images/goLogo.png" alt="">
+                            </div>
+                            <div class="border h-16 w-16 rounded-full flex items-center justify-center p-1">
+                                <img src="../images/goLogo.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-6">
+                    <div class="flex items-center justify-center">
+                        <img src="../images/heroIMG.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section class="py-12">
+        <div class="container">
+            <div class="flex flex-col items-center mb-8">
+              <h4 class="flex items-center text-cneter text-teal-500"><img src="../images/sectionIcon.svg" class="w-5 me-2" alt="">Services</h4>
+              <h2 class="capitalize text-2xl font-bold text-cneter">Services We Are Offering</h2>
+            </div>
+            <div class="grid grid-cols-12 gap-8 max-w-6xl mx-auto">
+                <div class="col-span-4">
+                    <div class="card sm:max-w-sm border border-gray-700 duration-200 hover:border-teal-500 hover:scale-105 cursor-pointer">
+                        <div class="card-body">
+                          <div class="h-24 w-24 rounded-full bg-teal-500 bg-opacity-20 flex items-center justify-center mx-auto mb-4">
+                              <img src="../images/serviceIcon.svg" class="h-16 w-16" alt="">
+                          </div>
+                            <h5 class="card-title mb-2.5 text-teal-500 text-center">Kubernet</h5>
+                            <p class="mb-4">Discover the features and benefits that our service offers. Enhance your experience with our user-friendly platform designed to meet all your needs.</p>
+                            <div class="card-actions">
+                                <button class="btn text-teal-500 mx-auto">+ Explore</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-4">
+                  <div class="card sm:max-w-sm border border-gray-700 duration-200 hover:border-teal-500 hover:scale-105 cursor-pointer">
+                      <div class="card-body">
+                        <div class="h-24 w-24 rounded-full bg-teal-500 bg-opacity-20 flex items-center justify-center mx-auto mb-4">
+                            <img src="../images/serviceIcon.svg" class="h-16 w-16" alt="">
+                        </div>
+                          <h5 class="card-title mb-2.5 text-teal-500 text-center">Kubernet</h5>
+                          <p class="mb-4">Discover the features and benefits that our service offers. Enhance your experience with our user-friendly platform designed to meet all your needs.</p>
+                          <div class="card-actions">
+                              <button class="btn text-teal-500 mx-auto">+ Explore</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-span-4">
+                <div class="card sm:max-w-sm border border-gray-700 duration-200 hover:border-teal-500 hover:scale-105 cursor-pointer">
+                    <div class="card-body">
+                      <div class="h-24 w-24 rounded-full bg-teal-500 bg-opacity-20 flex items-center justify-center mx-auto mb-4">
+                          <img src="../images/serviceIcon.svg" class="h-16 w-16" alt="">
+                      </div>
+                        <h5 class="card-title mb-2.5 text-teal-500 text-center">Kubernet</h5>
+                        <p class="mb-4">Discover the features and benefits that our service offers. Enhance your experience with our user-friendly platform designed to meet all your needs.</p>
+                        <div class="card-actions">
+                            <button class="btn text-teal-500 mx-auto">+ Explore</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ section -->
+    <section class="py-12">
+      <div class="flex flex-col items-center mb-8">
+        <h4 class="flex items-center text-center text-teal-500"><img src="../images/sectionIcon.svg" class="w-5 me-2" alt="">FAQ</h4>
+        <h2 class="capitalize text-2xl font-bold text-center">Frequently Asked Questions</h2>
+      </div>
+        <div class="container">
+          <div class="accordion accordion-bordered max-w-6xl mx-auto">
+            <div class="accordion-item active" id="payment-bordered">
+              <button class="accordion-toggle inline-flex items-center gap-x-4 px-5 py-4 text-start" aria-controls="payment-bordered-collapse" aria-expanded="true">
+                <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0"></span>
+                <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0"></span>
+                When is payment taken for my order?
+              </button>
+              <div id="payment-bordered-collapse" class="accordion-content w-full overflow-hidden transition-[height] duration-300" aria-labelledby="payment-bordered" role="region">
+                <div class="px-5 pb-4">
+                  <p class="text-base-content/80 font-normal">
+                    Payment is taken during the checkout process when you pay for your order. The order number that appears on the
+                    confirmation screen indicates payment has been successfully processed.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item" id="delivery-bordered">
+              <button class="accordion-toggle inline-flex items-center gap-x-4 px-5 py-4 text-start" aria-controls="delivery-bordered-collapse" aria-expanded="false">
+                <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0"></span>
+                <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0"></span>
+                How would you ship my order?
+              </button>
+              <div id="delivery-bordered-collapse" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="delivery-bordered" role="region">
+                <div class="px-5 pb-4">
+                  <p class="text-base-content/80 font-normal">
+                    For large products, we deliver your product via a third party logistics company offering you the “room of
+                    choice” scheduled delivery service. For small products, we offer free parcel delivery.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item" id="cancel̉-bordered">
+              <button class="accordion-toggle inline-flex items-center gap-x-4 px-5 py-4 text-start" aria-controls="cancel̉-bordered-collapse" aria-expanded="false">
+                <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0"></span>
+                <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0"></span>
+                Can I cancel my order?
+              </button>
+              <div id="cancel̉-bordered-collapse" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="cancel̉-bordered" role="region">
+                <div class="px-5 pb-4">
+                  <p class="text-base-content/80 font-normal">
+                    Scheduled delivery orders can be cancelled 72 hours prior to your selected delivery date for full refund.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="">
+        <div class="container">
+            <div class="grid grid-cols-12 max-w-6xl mx-auto gap-8">
+                <div class="col-span-6">
+                  <div class="card sm:card-side max-w-sm sm:max-w-full p-4 border flex gap-x-4">
+                    <div class="grid grid-cols-12 gap-4">
+                        <div class="col-span-4">
+                            <div class="w-full h-full flex items-start relative">
+                              <img src="../images/testimonialProfile.png" class="w-full rounded-lg" alt="headphone" />
+                              <div class="h-12 w-12 bg-teal-500 flex items-center justify-center bg-opacity-25 rounded-full absolute bottom-0 left-1/2 -translate-x-1/2">
+                                  <div class="h-8 w-8 bg-teal-500 rounded-full flex items-center justify-center">
+                                      <i class="fa-solid fa-quote-left text-white"></i>
+                                  </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-span-8">
+                          <p class="mb-3 border-b border-slate-700 line-clamp-4 h-[4.30lh]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                          <h5 class="card-title">Full Name</h5>
+                            <div class="flex justify-between w-full">
+                                <p>CEO, Company</p>
+                                <div class="flex gap-x-2">
+                                    <img src="../images/star.svg" class="w-5" alt="">
+                                    <img src="../images/star.svg" class="w-5" alt="">
+                                    <img src="../images/star.svg" class="w-5" alt="">
+                                    <img src="../images/star.svg" class="w-5" alt="">
+                                    <img src="../images/star.svg" class="w-5" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-span-6">
+                  <div class="card sm:card-side max-w-sm sm:max-w-full p-4 border flex gap-x-4">
+                    <div class="grid grid-cols-12 gap-4">
+                        <div class="col-span-4">
+                            <div class="w-full h-full flex items-start relative">
+                              <img src="../images/testimonialProfile.png" class="w-full rounded-lg" alt="headphone" />
+                              <div class="h-12 w-12 bg-teal-500 flex items-center justify-center bg-opacity-25 rounded-full absolute bottom-0 left-1/2 -translate-x-1/2">
+                                  <div class="h-8 w-8 bg-teal-500 rounded-full flex items-center justify-center">
+                                      <i class="fa-solid fa-quote-left text-white"></i>
+                                  </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-span-8">
+                          <p class="mb-3 border-b border-slate-700 line-clamp-4 h-[4.30lh]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                          <h5 class="card-title">Full Name</h5>
+                            <div class="flex justify-between w-full">
+                                <p>CEO, Company</p>
+                                <div class="flex gap-x-2">
+                                    <img src="../images/star.svg" class="w-5" alt="">
+                                    <img src="../images/star.svg" class="w-5" alt="">
+                                    <img src="../images/star.svg" class="w-5" alt="">
+                                    <img src="../images/star.svg" class="w-5" alt="">
+                                    <img src="../images/star.svg" class="w-5" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../node_modules/flyonui/flyonui.js"></script>
+    <script src="../node_modules/flyonui/dist/js/accordion.js"></script>
+
+    <script src="../scripts/custom.js"></script>
+</body>
+</html>
