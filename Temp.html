@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AOS Animation with TailwindCSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</head>
+<body class="bg-gray-100">
+    <!-- Section 1 -->
+    <section class="h-screen flex items-center justify-center bg-blue-500 text-white" data-aos="fade-up">
+        <h1 class="text-4xl font-bold">Welcome to AOS Animations</h1>
+    </section>
+
+    <!-- Animated Section 1 -->
+    <section class="h-screen flex items-center justify-center bg-green-500 text-white" data-aos="zoom-in">
+        <h2 class="text-4xl font-bold">Zoom-In Animation</h2>
+    </section>
+
+    <!-- Animated Section 2 -->
+    <section class="h-screen flex items-center justify-center bg-red-500 text-white" data-aos="fade-left">
+        <h2 class="text-4xl font-bold">Fade-Left Animation</h2>
+    </section>
+
+    <!-- Animated Section 3 -->
+    <section class="h-screen flex items-center justify-center bg-yellow-500 text-white" data-aos="flip-up">
+        <h2 class="text-4xl font-bold">Flip-Up Animation</h2>
+    </section>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000, // Animation duration in milliseconds
+            once: true // Whether animation should happen only once
+        });
+    </script>
+</body>
+</html>
